@@ -1,0 +1,13 @@
+<mat-accordion>
+	<mat-expansion-panel *ngFor="let sla of perfSlas">
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				{{sla.name}}
+			</mat-panel-title>
+		</mat-expansion-panel-header>
+		<mat-radio-group class="example-radio-group" aria-label="Select an option">
+			<mat-radio-button class="example-radio-button" *ngFor="let tsla of sla.threshHolds" [value]=tsla>
+				{{tsla}}</mat-radio-button>
+		</mat-radio-group>
+	</mat-expansion-panel>
+</mat-accordion>
